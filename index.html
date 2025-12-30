@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HatCat - See What Your LLM Is Thinking</title>
+    <meta name="description" content="Real-time concept detection and steering for large language models. Catch deception, manipulation, and misalignment before they manifest in text.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">
+            <img src="img/hat_large.png" alt="HatCat" class="nav-hat">
+            <span>HatCat</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="ftw.html">FTW</a>
+            <a href="about.html">About</a>
+            <a href="https://github.com/p0ss/HatCat" class="nav-github" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-visual">
+                <img src="img/hatcat_large.png" alt="HatCat - The little model under the hat" class="hero-cat">
+                <div class="scan-line"></div>
+            </div>
+            <div class="hero-text">
+                <h1>See what your LLM is thinking<span class="blink">_</span></h1>
+                <p class="tagline">Real-time concept detection and steering for language models.<br>
+                Catch deception before it speaks.</p>
+                <div class="hero-cta">
+                    <a href="https://github.com/p0ss/HatCat" class="btn btn-primary" target="_blank">
+                        <span class="btn-icon">▶</span> Get Started
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary">
+                        <span class="btn-icon">?</span> Learn More
+                    </a>
+                </div>
+                <p class="voom">VOOM &gt; FOOM</p>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <div class="scroll-arrow">▼</div>
+        </div>
+    </header>
+
+    <section class="problem-section">
+        <div class="container">
+            <h2>The Problem</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">👁️‍🗨️</div>
+                    <h3>Black Box</h3>
+                    <p>LLMs are opaque. We can't see what they're doing internally.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🎭</div>
+                    <h3>Deception</h3>
+                    <p>Models can think one thing and write another. Current methods can't detect this.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🎲</div>
+                    <h3>Hope & Pray</h3>
+                    <p>Safety approaches measure outcomes after the fact, or blunt capability with guardrails.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="solution-section">
+        <div class="container">
+            <h2>The HatCat Approach</h2>
+            <p class="section-intro">Make the model's internal state observable and steerable, then build governance on top.</p>
+            
+            <div class="concept-visual">
+                <div class="concept-layer">
+                    <img src="img/hat_large.png" alt="HAT" class="concept-img">
+                    <div class="concept-label">
+                        <span class="concept-name">HAT</span>
+                        <span class="concept-full">Headspace Ambient Transducer</span>
+                    </div>
+                    <p>Reads activations through concept lenses. Always on, minimal overhead.</p>
+                </div>
+                <div class="concept-connector">↓</div>
+                <div class="concept-layer">
+                    <img src="img/hatbot_large.png" alt="Substrate" class="concept-img">
+                    <div class="concept-label">
+                        <span class="concept-name">SUBSTRATE</span>
+                        <span class="concept-full">The Model Wearing the Hat</span>
+                    </div>
+                    <p>Any open-weights LLM. The raw activations we're observing.</p>
+                </div>
+                <div class="concept-connector">↓</div>
+                <div class="concept-layer">
+                    <img src="img/hatcat_large.png" alt="CAT" class="concept-img">
+                    <div class="concept-label">
+                        <span class="concept-name">CAT</span>
+                        <span class="concept-full">Conjoined Adversarial Tomograph</span>
+                    </div>
+                    <p>Detects divergence between what the model thinks vs. writes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-section">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Train Concept Lenses</h3>
+                        <p>Small classifiers learn to recognize concepts in a model's hidden states. We start from WordNet/SUMO ontologies and let the model define each concept in its own words.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Monitor in Real-Time</h3>
+                        <p>As the model generates text, every lens watches activations and reports concept intensity. Like an EEG for AI thoughts—8,000+ concepts at &lt;25ms latency.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Detect Divergence</h3>
+                        <p>Compare what the model is <em>thinking</em> (activation lenses) vs. what it's <em>writing</em> (text lenses). When they disagree significantly: deception detected.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Steer if Needed</h3>
+                        <p>The same directions used for detection can suppress or amplify concepts. Manifold-aware steering with falloff through surrounding layers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="capabilities-section">
+        <div class="container">
+            <h2>Capabilities</h2>
+            <div class="cap-grid">
+                <div class="cap-card">
+                    <div class="cap-header">
+                        <span class="cap-icon">◉</span>
+                        <h3>Detect</h3>
+                    </div>
+                    <p>Monitor 8,000+ concepts across multiple layers of any open-weights model</p>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-header">
+                        <span class="cap-icon">◎</span>
+                        <h3>Visualize</h3>
+                    </div>
+                    <p>See concept activations in real-time as text is generated</p>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-header">
+                        <span class="cap-icon">⟳</span>
+                        <h3>Steer</h3>
+                    </div>
+                    <p>Suppress dangerous behaviors with sub-token latency</p>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-header">
+                        <span class="cap-icon">⬡</span>
+                        <h3>Govern</h3>
+                    </div>
+                    <p>Build auditable, treaty-compliant AI systems</p>
+                </div>
+            </div>
+            
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-value">~8,000</span>
+                    <span class="stat-label">Concepts</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">&lt;1GB</span>
+                    <span class="stat-label">VRAM</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">&lt;25ms</span>
+                    <span class="stat-label">Latency</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">94%</span>
+                    <span class="stat-label">Suppression</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to look under the hat?</h2>
+                <p>HatCat is open source. CC0 code, train your own lenses, build your own perspective.</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/p0ss/HatCat" class="btn btn-primary" target="_blank">
+                        View on GitHub
+                    </a>
+                    <a href="ftw.html" class="btn btn-secondary">
+                        Explore FTW →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/hat_large.png" alt="HatCat" class="footer-logo">
+                    <span>HatCat</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="ftw.html">FTW</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/p0ss/HatCat" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://discord.gg/8hx2p2RCJS" target="_blank" rel="noopener" aria-label="Discord">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/HatCatFTW" target="_blank" rel="noopener" aria-label="X/Twitter">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Code: CC0 1.0 Universal (Public Domain) · Branding: © Possum Hodgkin 2025</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
